@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculadora IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cabecalho">
+            <h2 class="titulo">IMC</h2>
+            <p class="descricao-titulo">Cálculo do Índice de Massa Corporal</p>
+        </div>
+        <div class="entrada">
+            <h2>Informações do paciente</h2>
+            <div class="input-area">
+                <label><strong>Peso</strong></label>
+                <input type="number" id="peso" class="input-text">
+                <p class="Kg">Kg</p>
+                <br><br>
+                <label><strong>Altura</strong></label>
+                <input type="number" id="altura" class="input-text">
+                <p class="m">m</p>
+                <br>
+                <div class="radio-container">
+                    <input type="radio" name="idade" id="idoso">      
+                    <label for="idoso" class="condicao-1">Idoso: idade > 65 anos</label>
+                    <br>
+                    <input type="radio" name="idade" id="adulto">
+                    <label for="adulto" class="condicao-2">Adulto: idade <= 65 anos</label>
+                    <br>
+                </div>
+            </div>
+            <button id="calcular">Calcular</button>
+        </div>
+        <div class="resultado">
+            <p id="resultado-imc"></p>
+            <p id="resultado-classificacao"></p>
+        </div>
+    </div>
+    <script src="calculo_imc.js"></script>
+
+</body>
+</html>

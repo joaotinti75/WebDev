@@ -1,0 +1,139 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 23px;
+}
+
+header nav h2 i {
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+header nav div i {
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+hr {
+    background-color: #ccc;
+}
+
+#numeros {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#numeros div {
+    text-align: center;
+}
+
+#numeros div * {
+    margin: 0;
+    font-size: 25px;
+}
+
+#numeros img {
+    border-radius: 50%;
+    border: 3px solid #999;
+}
+
+#descricao {
+    margin-top: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 20px;
+}
+
+#descricao * {
+    margin: 0;
+    font-size: 22px;
+}
+
+#editar-perfil {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#botao {
+    width: 95%;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 6px 0;
+    font-weight: bolder;
+    font-size: 16px;
+    border: #aaa solid 2px;
+    cursor: pointer;
+}
+
+#stories {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
+}
+
+#stories img {
+    border-radius: 50%;
+}
+
+#pre-fotos {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#pre-fotos i {
+    cursor: pointer;
+}
+
+#grid-fotos {
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 320px);
+    justify-items: center;
+    justify-content: center;
+    grid-gap: 2em;
+}
+
+#grid-fotos img {
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #eee;
+    padding: 15px 0;
+}
+
+footer i {
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+}
+
+footer img {
+    border-radius: 50%;
+    border: 2px solid #000;
+    width: 55px;
+    height: 55px;
+}

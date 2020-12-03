@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+    <style>
+        body {
+            background-color: rgb(34 118 144);
+            font-family: Arial;
+        }
+
+        header {
+            text-align: center;
+            color: #fff;
+        }
+
+        #informacoes {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5%;
+            box-shadow: 10px 3px 4px #00000063;
+            height: auto;
+            margin: auto;
+            width: 50%;
+        }
+
+        #informacoes * {
+            margin-bottom: 20px;
+        }
+
+        #informacoes #ano-nascimento {
+            width: 25%;
+        }
+
+        #resultado {
+            text-align: center;
+        }
+
+
+        #resultado img {
+            border-radius: 50%;
+            display: none;
+        }
+
+        footer {
+            color: #fff;
+            font-style: italic;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    <section>
+        <div id="informacoes">
+            <label>Ano de nascimento: </label>
+            <input type="number" id="ano-nascimento" min=0>
+            <br>
+            <label>Sexo: </label>
+            <input type="radio" name="sexo" value="masculino" id="masculino" checked>
+            <label>Masculino</label>
+            <input type="radio" name="sexo" value="feminino" id="feminino">
+            <label>Feminino</label>
+            <br>
+            <button onclick="verificar()">Verificar</button>
+            <div id="resultado">
+                <p>Preencha os dados acima para ver o resultado!</p>
+                <img src="" width="300" height="300">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;CursoemVideo</p>
+    </footer>
+
+    <script>
+        var imagem = document.querySelector('img');
+        var texto = document.querySelector('p');
+        var data = new Date();
+        var anoAtual = data.getFullYear();
+        document.querySelector('#ano-nascimento').max = anoAtual;
+        document.querySelector('#ano-nascimento').value = anoAtual;
+
+
+
+        function verificar(){
+            var masculino = document.querySelector('#masculino').checked;
+            var anoInserido = Number(document.querySelector('#ano-nascimento').value);
+            var calculoIdade = anoAtual - anoInserido;
+
+            if (anoInserido > anoAtual || anoInserido < 0) {
+                alert('ERRO! Verifique os dados e tente novamente');
+            }
+            else {
+                imagem.style.display = 'inline';
+            
+
+                if (calculoIdade >= 0 && calculoIdade < 60 && masculino) {
+                    imagem.src = 'homem.jpg';
+                    texto.textContent = `Detectamos Homem com ${calculoIdade} anos`;
+
+                }
+
+                else if (calculoIdade >= 60 && masculino) {
+                    imagem.src = 'velho.png';
+                    texto.texContent = `Detectamos Homem com ${calculoIdade} anos`;
+                }
+
+                else if (calculoIdade >= 0 && calculoIdade < 60 && !masculino) {
+                    imagem.src = 'mulher.jpg';
+                    texto.textContent = `Detectamos Mulher com ${calculoIdade} anos`;
+                }
+
+                else if (calculoIdade > 60 && !masculino) {
+                    imagem.src = 'velha.jpg';
+                    texto.textContent = `Detectamos Mulher com ${calculoIdade} anos`;
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

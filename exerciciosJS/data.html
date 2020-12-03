@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #fff;
+            margin: auto;
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        div {
+            margin: auto;
+            width: 40%;
+            height: auto;
+            border-radius: 5%;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 30px;
+            box-shadow: 10px 3px 3px #0000003d;
+        }
+
+        p {
+            padding-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 50%;
+        }
+
+        em {
+            display: block;
+            margin: auto;
+            width: 40%;
+            text-align: center;
+            color: #fff;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Hora do dia</h1>
+    <div>
+        <p>Agora são 10 horas</p>
+        <img src="" alt="manha">
+    </div>
+    <em>&copy; CursoemVideo</em>
+
+    <script>
+        var today = new Date();
+        var time = today.getHours();
+        document.querySelector('p').textContent = `Agora são ${time} horas`;
+
+        if (time >= 6 && time < 12) {
+            document.querySelector('img').setAttribute('src', 'morning.jpg'); 
+            document.body.style.backgroundColor = '#b1942aed';
+        }
+
+        else if (time >= 12 && time < 18) {
+            document.querySelector('img').setAttribute('src', 'afternoon.jpg');
+            document.body.style.backgroundColor = '#1954fbc7';
+
+        }
+
+        else {
+            document.querySelector('img').src = 'night.jpg';
+            document.body.style.backgroundColor = '#444';
+        }
+
+    </script>
+</body>
+</html>

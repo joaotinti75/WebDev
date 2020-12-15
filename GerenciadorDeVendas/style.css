@@ -1,0 +1,92 @@
+html, body {
+    background: linear-gradient(#8627d4 0%, #cb49ea 100%) no-repeat;;
+    box-sizing: border-box;
+}
+
+* {
+    font: 100 3rem/1.5 "Nunito", sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+header h1 {
+    font-size: 5rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+#container {
+    background-color: #fff;
+    margin: auto;
+    width: 90%;
+    padding-top: 2rem;
+    height: 100vh;
+    border-radius: 10%;
+}
+
+#escolha-sexo {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+#escolha-sexo img, #escolha-sexo i {
+    display: none;
+}
+
+#escolha-sexo .blocos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blocos + .blocos {
+    margin-left: 1rem;
+}
+
+#tamanho {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    font-size: 3rem;
+}
+
+#tamanhos-femininos {
+    display: none;
+}
+
+#tamanho i {
+    display: none;
+    margin-left: 1.5rem;
+}
+
+#quantidade {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+#quantidade input {
+    text-align: center;
+    width: 10rem;
+    height: 5rem;
+    font-size: 3rem;
+
+}
+
+#quantidade label {
+    color: green;
+}
+
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3ceda6c4df.js" crossorigin="anonymous"></script>  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerenciado Máscara</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Vendas de Máscaras</h1>
+        </header>
+        <h1>Sexo</h1>
+        <section id="escolha-sexo">
+            <div class="blocos">
+                <label for="sexo">Masculino</label>
+                <input id="masculino" value="masculino" name="sexo" type="radio" onclick="adicionaFoto()">
+            </div>
+            <div class="blocos">
+                <label for="sexo">Feminino</label>
+                <input id="feminino" value="feminino" name="sexo" type="radio"  onclick="adicionaFoto()">
+            </div>
+            <div class="blocos">
+                <img src="" width="100" height="100">
+            </div>
+            <div class="blocos">
+                <i class="fas fa-check" style="color:green"></i>
+            </div>
+        </section>
+
+        <h1>Tamanho da Máscara</h1>
+        <section id="tamanho">
+            <div id="tamanhos-masculinos">
+                <label for="tamanho-masculino">G</label>
+                <input id="G-M" type="radio" value="G" name="tamanho-masculino" onclick="adicionaChecado()">
+                <label for="tamanho-masculino">GG</label>
+                <input id="GG-M" type="radio" value="GG" name="tamanho-masculino" onclick="adicionaChecado()">
+            </div>
+
+            <div id="tamanhos-femininos">
+                <label for="tamanho-feminino">P</label>
+                <input id="P-F" type="radio" value="P" name="tamanho-feminino" onclick="adicionaChecado()">
+                <label for="tamanho-feminino">M</label>
+                <input id="M-F" type="radio" value="M" name="tamanho-feminino" onclick="adicionaChecado()">
+                <label for="tamanho-feminino">G</label>
+                <input id="G-F" type="radio" value="G" name="tamanho-feminino" onclick="adicionaChecado()">
+            </div>
+            <i class="fas fa-check" style="color:green"></i>
+        </section>
+
+        <h1>Quantidade de máscaras</h1>
+        <section id="quantidade">
+            <input type="number" min="1" value="1">
+            <label>X 8 = R$8,00</label>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+body {
+    background: #d2d2c1 url('imagens/fundo.png');
+    font: 16px Arial, Helvetica, sans-serif;
+}
+
+section {
+    background-color: #f1f0ee;
+}
+
+section, footer {
+    width: 900px;
+}
+
+#paginas-container {
+    background-color: #8a8c63;
+    padding: 20px;
+    font-weight: bold;
+    color: #213373;
+}
+
+#paginas-container a {
+    text-decoration: none;
+    color: #213373;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#texto-container img {
+    border: 10px solid #797752;
+}
+
+#texto-container, footer {
+    padding: 20px;
+}

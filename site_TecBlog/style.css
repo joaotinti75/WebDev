@@ -1,0 +1,120 @@
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            background-color: #e4e4e1;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        #header-container {
+            background-color: #f7a51d;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .paginas {
+            margin-top: 20px;
+        }
+
+        .paginas a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 0 12px;
+            font-size: 21px;
+        }
+
+        .paginas a:hover {
+            background-color: #fff;
+            color: #f7a51d;
+            padding: 10px;
+        }
+
+  
+        #section-container, #rodape {
+            width: 85vw;
+            margin: 15px auto;
+        }
+
+
+        .principal{
+            width: 50vw;
+            background-color: #fff;
+            padding: 20px;
+            float: left;
+        }
+
+        .principal h1 {
+            margin-bottom: 0;
+            color: #f7a51d;
+        }
+
+        .principal p {
+            margin-top: 0;
+        }
+
+        .aside-recentes {
+            background-color: #fff;
+            width: 30vw;
+            float: right;
+        } 
+
+        .aside-categorias {
+            background-color: #fff;
+            width: 30vw;
+            float: right;
+            margin-top: 20px;
+        }
+
+        .principal img {
+            width: 100%;
+        }
+
+        .image-description {
+            width: 100%;
+        }
+
+
+        .recentes, .categorias {
+            padding: 2px 10px;
+        }
+
+        .h1-formatado {
+            background-color: #d2cece;
+            color: #525151;
+            font-weight: 700;
+            margin-top: 0;
+        }
+
+        .leia-mais {
+            display:block;
+            color:#f7a51d;
+            text-decoration: none;
+        }
+
+        .categorias ul {
+            padding-left: 0;
+            margin-top: 0;
+        }
+
+        .categorias li {
+            list-style: none;
+        }
+
+        .lista-categorias {
+            display: block;
+            color: #f7a51d;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        #rodape {
+            text-align: center;
+            background-color:#bbbaba;
+            padding: .4px 10px;
+        }

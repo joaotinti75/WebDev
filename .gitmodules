@@ -1,0 +1,3 @@
+[submodule "site_TecBlog"]
+	path = site_TecBlog
+	url = https://github.com/joaotinti75/WebDev

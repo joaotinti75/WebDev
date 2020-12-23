@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias Cidade</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: url(./imagens/fundo.png);
+            height: 233px;
+            
+        }
+
+        header #img-container {
+            display: flex;
+            width: 70%;
+            margin: 0 auto;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header #logo {
+            align-self: flex-start;
+            margin-top: 20px;
+        }
+
+        header #paginas-container {
+            width: 70%;
+            margin: -50px auto 0 auto;
+        }
+
+        header .links-paginas {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: #bf2828;
+            padding: 10px;
+        }
+
+        header .links-paginas:hover {
+            background-color:#de5151;
+        }
+
+        .links-paginas + .links-paginas {
+            margin-left: -4px;
+        }
+
+        section {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        section  #section-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+        }
+
+        section .barra-pequena {
+            background-color: #294c71;
+            color: #fff;
+            font-weight: bold;
+            padding: 5px 50px 2px 2px;
+        }
+
+        section .links-entrevistas {
+            display: block;
+            line-height: 2.5;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .barra-pequena + .barra-pequena {
+            margin-top: 30px;
+        }
+
+        section .barra-grande {
+            background-color: #294c71;
+            color: #fff;
+            font-weight: bold;
+            padding: 2px 100px 2px 5px;
+        }
+
+        section .barra-importante {
+            background-color: #bf2828;
+            padding: 2px 10px 2px 5px;
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 5px;
+            width: 80%;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="img-container">
+            <img src="./imagens/logo.png" alt="" id="logo">
+            <img src="./imagens/detalhe-topo.png" alt="">
+        </div>
+        <div id="paginas-container">
+            <a href="" class="links-paginas">Home</a>
+            <a href="" class="links-paginas">Brasil</a>
+            <a href="" class="links-paginas">Internacional</a>
+            <a href="" class="links-paginas">Economia</a>
+            <a href="" class="links-paginas">Saúde</a>
+            <a href="" class="links-paginas">Ciência</a>
+            <a href="" class="links-paginas">Fotos</a>
+        </div>
+    </header>
+    <section>
+        <div id="section-container">
+            <div id="entrevistas">
+                <h2 class="barra-pequena">Entrevistas</h2>
+                <a href="" class="links-entrevistas">José Almeida</a>
+                <a href="" class="links-entrevistas">Felipe Silva</a>
+                <a href="" class="links-entrevistas">Renato Rodrigues</a>
+                <a href="" class="links-entrevistas">Abelardo Silveira</a>
+                <a href="" class="links-entrevistas">André Carlos</a>
+                <a href="" class="links-entrevistas">Márcio Mello</a>
+                <a href="" class="links-entrevistas">João Pedro</a>
+                <a href="" class="links-entrevistas">Fernando Weiss</a>
+                <h2 class="barra-pequena">News</h2>
+            </div>
+            <div id="ultima-entrevista">
+                <h2 class="barra-grande">Última entrevista</h2>
+                <h3 class="barra-importante">Entrevista com FELIPE SILVA</h3>
+                <img src="./imagens/doutor.jpg" width="340" height="213" alt="">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div id="destaque">
+                <h2 class="barra-grande">Destaque</h2>
+            
+            </div>
+        </div>
+    </section>
+</body>
+</html>

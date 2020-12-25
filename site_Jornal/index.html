@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notícias Cidade</title>
+    <title>Notícias Cidade - Seu site de notícias</title>
     <style>
         html, body {
             margin: 0;
             padding: 0;
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            background: url(./imagens/fundo.png) repeat-x;
+
         }
 
         header {
-            background: url(./imagens/fundo.png);
             height: 233px;
             
         }
@@ -75,8 +77,15 @@
             line-height: 2.5;
             text-decoration: none;
             color: #000;
-            font-weight: bold;
+            font-size: 18px;
+            background-color: #fff;
+            border-bottom: 1px solid #000;
         }
+
+        section .links-entrevistas:hover {
+            color: red;
+        }
+
 
         .barra-pequena + .barra-pequena {
             margin-top: 30px;
@@ -87,6 +96,7 @@
             color: #fff;
             font-weight: bold;
             padding: 2px 100px 2px 5px;
+            
         }
 
         section .barra-importante {
@@ -98,7 +108,50 @@
             width: 80%;
         }
 
+        section #section-container p {
+            width: 340px;
+            margin-bottom: 0;
+        }
 
+        section #section-container .leia-mais {
+            color: #bf2828;
+
+        }
+
+        section #coluna-1 #entrevistas {
+            background: url(./imagens/fundo-caixa.png);
+        }
+
+        section #coluna-2 #ultima-entrevista,
+        section #coluna-3 #destaque
+        {
+            background: url(./imagens/fundo-caixa.png);
+        }
+
+        section #coluna-2 .mundo-container {
+            display: flex;
+            width: 20vw;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #000;
+
+        }
+
+        section #coluna-2 .mundo-container div {
+            margin-left: 10px;
+        }
+
+        section #coluna-2 .mundo-container h3 {
+            color: #2828da;
+            font-size: 15px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        section #coluna-2 .mundo-container p {
+            margin-top: 0;
+            width: 19vw;
+        }
 
     </style>
 </head>
@@ -120,27 +173,69 @@
     </header>
     <section>
         <div id="section-container">
-            <div id="entrevistas">
-                <h2 class="barra-pequena">Entrevistas</h2>
-                <a href="" class="links-entrevistas">José Almeida</a>
-                <a href="" class="links-entrevistas">Felipe Silva</a>
-                <a href="" class="links-entrevistas">Renato Rodrigues</a>
-                <a href="" class="links-entrevistas">Abelardo Silveira</a>
-                <a href="" class="links-entrevistas">André Carlos</a>
-                <a href="" class="links-entrevistas">Márcio Mello</a>
-                <a href="" class="links-entrevistas">João Pedro</a>
-                <a href="" class="links-entrevistas">Fernando Weiss</a>
-                <h2 class="barra-pequena">News</h2>
+            <div id="coluna-1">
+                <div id="entrevistas">
+                    <h2 class="barra-pequena">Entrevistas</h2>
+                    <a href="" class="links-entrevistas">José Almeida</a>
+                    <a href="" class="links-entrevistas">Felipe Silva</a>
+                    <a href="" class="links-entrevistas">Renato Rodrigues</a>
+                    <a href="" class="links-entrevistas">Abelardo Silveira</a>
+                    <a href="" class="links-entrevistas">André Carlos</a>
+                    <a href="" class="links-entrevistas">Márcio Mello</a>
+                    <a href="" class="links-entrevistas">João Pedro</a>
+                    <a href="" class="links-entrevistas">Fernando Weiss</a>
+                    <h2 class="barra-pequena">News</h2>
+                </div>
             </div>
-            <div id="ultima-entrevista">
-                <h2 class="barra-grande">Última entrevista</h2>
-                <h3 class="barra-importante">Entrevista com FELIPE SILVA</h3>
-                <img src="./imagens/doutor.jpg" width="340" height="213" alt="">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <div id="coluna-2">
+                <div id="ultima-entrevista">
+                    <h2 class="barra-grande">Última entrevista</h2>
+                    <h3 class="barra-importante">Entrevista com FELIPE SILVA</h3>
+                    <img src="./imagens/doutor.jpg" width="340" height="213" alt="">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor</p>
+                    <a href="" class="leia-mais">Leia mais!</a>
+                </div>
+                <div id="mundo">
+                    <h2 class="barra-grande">Mundo</h2>
+                    <div class="mundo-container">
+                        <img src="./imagens/tecnologia.jpg" width="128" height="85" alt="">
+                        <div>
+                            <h3>NOVAS TECNOLOGIAS!</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur...</p>
+                        </div>
+                    </div>
+                    <div class="mundo-container">
+                        <img src="./imagens/tecnologia.jpg" width="128" height="85" alt="">
+                        <div>
+                            <h3>NOVAS TECNOLOGIAS!</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur...</p>
+                        </div>
+                    </div>
+                    <div class="mundo-container">
+                        <img src="./imagens/tecnologia.jpg" width="128" height="85" alt="">
+                        <div>
+                            <h3>NOVAS TECNOLOGIAS!</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur...</p>
+                        </div>
+                    </div>
+                    <div class="mundo-container">
+                        <img src="./imagens/tecnologia.jpg" width="128" height="85" alt="">
+                        <div>
+                            <h3>NOVAS TECNOLOGIAS!</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur...</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div id="destaque">
-                <h2 class="barra-grande">Destaque</h2>
-            
+            <div id="coluna-3">
+                <div id="destaque">
+                    <h2 class="barra-grande">Destaque</h2>
+                    <h3 class="barra-importante">NOVA LEGISLAÇÃO</h3>
+                    <img src="./imagens/taxi.jpg" width="340" height="213" alt="">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor</p>
+                    <a href="" class="leia-mais">Leia mais!</a>
+                </div>
             </div>
         </div>
     </section>

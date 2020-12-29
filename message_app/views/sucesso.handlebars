@@ -1,0 +1,10 @@
+<h1>Lista de mensagens enviadas:</h1>
+<br>
+<br>
+<br>
+{{#each msgs}}
+    <small>{{dataValues.createdAt}}</small>
+    <h1>{{dataValues.msg}}</h1>
+    <a href="/deletar/{{dataValues.id}}"><button>Deletar</button></a>
+    <hr>
+{{/each}}

@@ -1,5 +1,17 @@
+<link rel="stylesheet" href="/css/estilo_form.css">
+<script src="https://kit.fontawesome.com/3ceda6c4df.js" crossorigin="anonymous"></script>  
+
+<div id="area-msg">
+    {{#each msgs}}
+        <p>{{dataValues.msg}}</p>
+        <hr>
+    {{/each}}
+</div>
 <form action="/add" method="POST">
-    <p>Mensagem:</p>
-    <textarea name="mensagem" id="" cols="30" rows="10"></textarea><br>
-    <button type="submit">Enviar msg</button>
+    <div id="container">
+        <textarea name="mensagem" id="" cols="40" rows="3" placeholder="digite sua mensagem"></textarea><br>
+        <button type="submit"><i class="fas fa-arrow-circle-right"></i></button>
+    </div>
 </form>
+
+<script src="/scripts/msg_script.js"></script>

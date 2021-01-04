@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+    <style>
+
+        body {
+            background-color: #b5b5b5;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        #msg-area {
+            height: 80vh;
+            width: 70%;
+            margin: 0 auto;
+            overflow: auto;
+        }
+
+        #msg-area ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #msg-area p {
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            background-color: rgb(31, 37, 31);
+            border-radius: 20px;
+        }
+
+        form {
+            position: fixed center;
+            padding: 10px;
+            display: flex;
+            width: 70%;
+            justify-content: space-around;
+            margin: 10px auto;
+            height: 10vh;
+        }
+
+        form textarea {
+            width: 70%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="msg-area">
+        <ul>
+
+        </ul>
+    </div>
+
+    <form action="#" onSubmit="sendMessage()">
+        <textarea name="msg" id="msg" placeholder="Digite sua mensagem"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        var ws = new WebSocket('ws://localhost:3001') //conectando o client ao endereço do servidor
+
+        ws.onopen = function() {
+            console.log('Conectei')
+        }
+
+        ws.onmessage = function(msg) {
+            console.log('recebi', msg)
+            var messages = document.querySelector('#msg-area ul')
+            var message_format = document.createElement('li')
+            message_format.innerHTML = `<p>${msg.data}</p>`
+            messages.append(message_format)
+        }
+
+        function sendMessage(){
+            var input = document.querySelector('#msg')
+            var text = input.value
+
+            input.value = '' //depois que manda a msg, quero q limpe o texto
+
+            ws.send(text)
+
+            return false //gambiarra pra funcionar
+        }
+
+        //error
+        //close
+
+    
+
+    </script>
+</body>
+</html>

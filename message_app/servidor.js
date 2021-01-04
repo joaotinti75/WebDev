@@ -1,44 +1,38 @@
-const express = require('express');
-const app = express();
-const handlebars = require('express-handlebars')
-const bodyParser = require('body-parser')
-const Msg = require('./models/Mensagem')
+const WebSocket = require('ws')
+const express = require('express')
+const path = require('path')
 
-app.use(express.static('public'))
+const wss = new WebSocket.Server({port:3001}) 
 
-// Configurando o Template Engine Handlebars
-app.engine('handlebars', handlebars({defaultLayout:'main'}))
-app.set('view engine', 'handlebars')
+const app = express()
+const port = 3000
 
-// Configurando o Body Parser
-app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json())
+const allSockets = [];
 
-app.get('/', function(req, res){
-    res.render('formulario')
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'))
 })
 
-app.get('/sucesso', function(req, res){
-    Msg.findAll().then(function(msgs){
-        //console.log(msgs) //trata-se de um array
-        res.render('formulario', {msgs:msgs})
-    })
+/*
+app.listen(port, () => {
+    console.log('Servidor rodando em http://localhost:3000')
 })
-
-
-app.post('/add', function(req, res){
-    Msg.create({
-        msg: req.body.mensagem
-    }).then(function(){
-        res.redirect('/sucesso')
-        //res.send('Post criado com sucesso') 
-    }).catch(function(erro){
-        res.send('Houve um erro: ' + erro)
-    })
-    //res.send(`Mensagem: ${req.body.mensagem}`)//Quando o formulario tem o método post, devemos mudar o tipo da rota para post
-})
-
-app.listen('80', '192.168.1.30', () => {
+*/
+app.listen('3000', '192.168.1.30', () => {
     console.info('server started on port 80')
 })
 
+const handleMessage = (msg) => {
+    console.log('Recebi do cliente', msg)
+
+    for (let ws of allSockets) {
+        console.log('Mandando ', msg)
+        ws.send(msg);
+    }
+}       
+
+wss.on('connection', (ws) => { //Quando um cliente se conectar ao servidor, ele manda uma mensagem para o cliente
+    console.log('conectaram')
+    allSockets.push(ws)
+    ws.on('message', handleMessage)  
+})
